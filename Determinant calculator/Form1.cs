@@ -28,21 +28,26 @@ namespace Determinant
         List<List<int>> Matrixmaking()
         {
             string[] tempstring;
-            
-            tempstring = tbxmatris.Text.Split(Environment.NewLine.ToCharArray());
 
-            List<int>[] tempmatrix = new List<int>[tempstring.Length];
+            tempstring = tbxmatris.Text.Split(new[] { "\r\n", "\r", "\n" },StringSplitOptions.None);
+
+            int[][] tempmatrix = new int[tempstring.Length][];
 
             for (int i = 0; i < tempstring.Length; i++)
             {
                 string[] temp = tempstring[i].Split(' ');
                 for (int j = 0; j < tempstring.Length; j++)
                 {
-                    tempmatrix[i][j] = int.Parse(temp[j]);
+                    if (i == 0) tempmatrix[j] = new int[tempstring.Length];
+                    tempmatrix[j][i] = (int.Parse(temp[j]));
                 }
             }
-            
-            return tempmatrix.ToList();
+            List<List<int>> listList = new List<List<int>>();
+            for(int i = 0; i < tempmatrix.Length; i++)
+            {
+                listList.Add(tempmatrix[i].ToList());
+            }
+            return listList;
         }
     }
 }

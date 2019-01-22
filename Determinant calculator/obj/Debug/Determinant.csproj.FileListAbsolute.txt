@@ -18,3 +18,13 @@ C:\Users\Linne\source\repos\Determinant\obj\Debug\Determinant.csproj.GenerateRes
 C:\Users\Linne\source\repos\Determinant\obj\Debug\Determinant.csproj.CoreCompileInputs.cache
 C:\Users\Linne\source\repos\Determinant\obj\Debug\Determinant.exe
 C:\Users\Linne\source\repos\Determinant\obj\Debug\Determinant.pdb
+C:\Users\Linne\Documents\GitHub\Determinant\Determinant calculator\bin\Debug\Determinant.exe.config
+C:\Users\Linne\Documents\GitHub\Determinant\Determinant calculator\bin\Debug\Determinant.exe
+C:\Users\Linne\Documents\GitHub\Determinant\Determinant calculator\bin\Debug\Determinant.pdb
+C:\Users\Linne\Documents\GitHub\Determinant\Determinant calculator\obj\Debug\Determinant.csprojAssemblyReference.cache
+C:\Users\Linne\Documents\GitHub\Determinant\Determinant calculator\obj\Debug\Determinant.Form1.resources
+C:\Users\Linne\Documents\GitHub\Determinant\Determinant calculator\obj\Debug\Determinant.Properties.Resources.resources
+C:\Users\Linne\Documents\GitHub\Determinant\Determinant calculator\obj\Debug\Determinant.csproj.GenerateResource.cache
+C:\Users\Linne\Documents\GitHub\Determinant\Determinant calculator\obj\Debug\Determinant.csproj.CoreCompileInputs.cache
+C:\Users\Linne\Documents\GitHub\Determinant\Determinant calculator\obj\Debug\Determinant.exe
+C:\Users\Linne\Documents\GitHub\Determinant\Determinant calculator\obj\Debug\Determinant.pdb
