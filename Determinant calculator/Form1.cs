@@ -22,7 +22,7 @@ namespace Determinant
         {
             Matrix matris = new Matrix(Matrixmaking());
 
-            tbxdeterminant.Text = matris.Determinant.ToString();
+            tbxdeterminant.Text = matris.Determ(matris).ToString();
         }
 
         List<List<int>> Matrixmaking()

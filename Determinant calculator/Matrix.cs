@@ -9,24 +9,24 @@ namespace Determinant
     class Matrix
     {
         List<List<int>> matrix = new List<List<int>>();
-        int det = 0;
-        int determinant;
+        
+        
 
         public Matrix(List<List<int>> M)
         {
             matrix = M;
 
-            determinant = Determ(new Matrix(matrix));
+            
             
         }
         
-        public int Determinant
+        /*public int Determinant
         {
             get
             {
                 return determinant;
             }
-        }
+        }*/
 
         public List<int> this[int index]
         {
@@ -38,12 +38,20 @@ namespace Determinant
         
         private Matrix PopRowAndCollum(int rowindex, int collumindex)
         {
-            List<List<int>> temp = matrix;
+            List<List<int>> temp = new List<List<int>>();
+            for (int i = 0; i < matrix.Count; i++)
+            {
+                temp.Add(new List<int>(matrix[i]));
+            }
+
             temp.RemoveAt(collumindex);
 
             for(int i = 0; i < temp.Count; i++)
             {
+                int capacity = temp.Capacity;
                 temp[i].RemoveAt(rowindex);
+                capacity = temp.Capacity;
+
             }
 
             return new Matrix(temp);
@@ -57,25 +65,18 @@ namespace Determinant
         }
 
 
-        int Determ(Matrix m)
+        public int Determ(Matrix m)
         {
+            int Sin = 1;
+            int det = 0;
             if (m.Length == 1)
             {
                 return m[0][0];
             }
-            for (int j = 0; j < m.Length; j++)
+            for (int i = 0; i < m.Length; i++)
             {
-                for (int i = 0; i < m.Length; i++)
-                {
-                    if ((j % 2 == 0 && i % 2 == 0) || (j % 2 != 0 && i % 2 != 2))
-                    {
-                        det += m[j][i] * Determ(m.PopRowAndCollum(j, i));
-                    }
-                    else
-                    {
-                        det -= m[j][i] * Determ(m.PopRowAndCollum(j, i));
-                    }
-                }
+                det +=  Sin * m[i][0] * Determ(m.PopRowAndCollum(0, i));
+                Sin *= -1;
             }
             return det;
         }
